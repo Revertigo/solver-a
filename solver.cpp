@@ -1,5 +1,6 @@
 #include "solver.hpp"
 
+#include <iostream>
 namespace solver{
     //RealVariable class
     RealVariable operator +(const RealVariable &, const RealVariable &){return RealVariable();}
@@ -13,7 +14,7 @@ namespace solver{
     RealVariable operator ==(const RealVariable &, const RealVariable &){return RealVariable();}
     RealVariable operator ==(const RealVariable &, const int){return RealVariable();}
 
-    double solve(RealVariable) {return true;}
+    double solve(RealVariable) {return 0.0;}
 
     //ComplexVariable class
     ComplexVariable operator +(const ComplexVariable &, const ComplexVariable &){return ComplexVariable();}

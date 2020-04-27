@@ -10,14 +10,14 @@ namespace solver{
     class RealVariable;
     class ComplexVariable;
 
-    double solve(RealVariable);
+    double solve(RealVariable);//Function has to clear the varables of the reference
     complex<double> solve(ComplexVariable);
 
     class RealVariable{
         double _re;
 
     public:
-        RealVariable(): _re(0.0){};//Default C'tor
+        RealVariable(): _re(1.0){};//Default C'tor
         //We want make it friend in order to enable something like 7 * RealVariable
         friend RealVariable operator +(const RealVariable &, const RealVariable &);
         friend RealVariable operator +(const RealVariable &, const int);
